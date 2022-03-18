@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // Write a JS code to find the no of digits in a number
+    // Function digitCount() to returns the number of digits in a given number using while loop.
+
+    let count = 0;
+    const digitCount = function (num){
+      // num is 87638
+      while(parseInt(num/10) !== 0){
+            num = parseInt(num/10); // num is 87638
+            console.log(num)
+            count++; // 3
+      }
+
+      return count;
+    }
+
+    function test(n) {
+        console.log("hi world!")
+        if (n == 1)
+            return; // finished
+            test(n-1);
+        console.log("hello world");
+    }
+
+    //test(2)
+    // console.log(digitCount(87638213)+1);
+
+    // Write a JS code to calculate the sum of digits in a number
+    // Function digitSum() to returns sum of all digits in a given number using while loop. Learn more about JavaScript built-in Math methods from
+    
+    function digitCount(num) {
+    var count=0; //return 1 for pow=0
+    let sum = 0
+    // num is 8367
+    while(num / 10 > 0){ // what we want is that we we have to have value when single digit num is divided by 10 ==> 8/10 must have a value 0.0
+        let saveRemainder = num % 10; // 7, 6, 3, 8
+        sum += saveRemainder // 7, 6, 3, 8
+        num = Math.floor(num / 10); // 8367/10 is 836.3333333333
+      }
+      return sum;
+    }
+
+    console.log(digitCount(8367)); //4
+    //console.log(digitCount(563349))
+
+
+  </script>
+</body>
+</html>

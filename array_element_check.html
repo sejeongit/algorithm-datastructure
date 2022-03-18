@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>let's study javascript</h1>
+  <script>
+    var arr1 = [1, 8, 9, 2, 5, 21, 12, 6, 43];
+    var arr2 = [3, 7]
+    var a = 21;
+    var b = 11;
+    var c = 7;
+    var i;
+
+    var arrCheck = function(arr, x) {
+      if(arr.includes(x)){
+        return true;
+      }else{
+        return false;}
+    };
+
+    // console.log(arrCheck(arr1, a));
+
+    var arrCheck2 = function(arr, x) {
+      for(i=0; i<arr.length; i++){
+        // console.log(arr[i])
+        if(arr[i] == x){
+          return true;
+        }
+      }
+      return false;
+    }
+    // whenever you find answer return true. otherwise, go on with next value. if no more values left in arr, your for loop ends. then return false.
+
+    // console.log(arr1[1])
+    // console.log(arr1.length);
+    // console.log(arrCheck2(arr1, a))
+    // console.log(arrCheck2(arr1, b))
+    // console.log(arrCheck2(arr2, c))
+
+    const arr5 = ['a', 'b', 'c', 'a'];
+
+    // 배열에서 'a' 개수 구하기
+    let count = 0;
+    for(let i=0; i < arr5.length; i++) {
+      if(arr5[i] === 'a')  {
+        count++;
+      }
+    }
+
+    document.write(count);
+
+
+    var arr3 = [1, 2, 7, 3, 4, 5, 6, 7, 7];
+    var occur = 0;
+
+    var arrCheck3 = function(arr, x) {
+      for(var j=0; j<arr.length; j++){
+        if(arr[j] == x){
+          occur++;
+        }
+      }
+      return occur;
+    }
+
+    console.log(arrCheck3(arr3, 7))
+
+  </script>
+</body>
+</html>

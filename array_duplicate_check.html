@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script>
+    // given array [1, 2, 3, 3, 3, ,4, 1, 2, 6, 7, 8, 9, 10, 3] and find only duplicate values print as an array
+
+    const arr1 = [1, 2, 3, 3, 3, 4, 1, 2, 6, 7, 8, 9, 10, 3] ;
+
+    // function arrDuplicateCheck(arr) {
+    //   for(let i=0; i<arr.length; i++){
+    //     const element = arr[i];
+
+    //     for(let j=0; j<arr.length; j++){
+    //       if(element == arr[j]){
+    //         return true;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // console.log(arrDuplicateCheck(arr1));
+
+    // --------------------------------------
+    let i;
+    let j;
+    // if (i != j && element == arr[i]) 
+    //  result.push(element);
+    
+    // i != j mean except itself, for example i = 0, j = 0, it's same element, so we don't need it
+
+    // const arr = [1, 2, 3, 3, 3, 4, 1, 2, 6, 7, 8, 9, 10, 3];
+ 
+    // var result = [];
+    // for (i = 0; i < arr.length; i++) {
+    //     let element= arr[i];
+    //     for(j = 0; j < arr.length; j++) {
+    //     if (i != j && element == arr[j]) result.push(element);
+    //   }
+    // } // without avoiding muliple duplicates
+
+    const arr = [1, 2, 3, 3, 3, 4, 1, 2, 6, 7, 8, 9, 10, 3];
+    var mp = new Map()
+    var result = [];
+    for (i = 0; i < arr.length; i++) {
+        let element= arr[i];
+        if (mp.get(arr[i])) continue;
+        mp.set(arr[i], true);
+        for(j = 0; j < arr.length; j++) {
+          if (i != j && element == arr[j]) result.push(element);
+      }
+    }
+    document.getElementById("demo").innerHTML = result;
+    // with map()
+
+  </script>
+</body>
+</html>

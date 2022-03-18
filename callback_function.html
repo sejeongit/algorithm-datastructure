@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script>
+    // make four function add, sub, div and mul
+    // make another one function which takes one of above function with two integers and print result
+
+    // ex ) callback(add, 12, 45)// 57
+
+    const add = function add(x, y) {
+      return x + y;
+    }
+
+    const sub = function sub(x, y) {
+      return x - y;
+    }
+
+    const div = function div(x, y) {
+      return x / y;
+    }
+
+    const mul = function mul(x, y) {
+      return x * y;
+    }
+
+    const callback = function callback(fun, x, y) {
+      return fun(x, y);
+    }
+
+    console.log(callback(add, 1, 2));
+    console.log(callback(sub, 10, 4));
+    console.log(callback(div, 4, 2));
+    console.log(callback(mul, 30, 10));
+
+  </script>
+</body>
+</html>
