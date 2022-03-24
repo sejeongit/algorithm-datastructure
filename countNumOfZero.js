@@ -27,7 +27,7 @@ let arr2 =
  //  index out of bound
  for(let row = 4-1; row >= 0; row--) {
  	for(let col = 4-1; col >= 0; col--) {
-    	document.write(arr[col][row]);
+    	document.write(arr2[col][row]);
     }
  }
 
