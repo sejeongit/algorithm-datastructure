@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // * for문 안에 for문
+    // print this
+    // 1, 2, 3
+    // 4, 5, 6
+    // 7, 8, 9
+    // 10, 11, 12
+
+    const forFunc = function() {
+	  let number = 1;
+      for(i=1; i<=4; i++, number++){
+       		for(j = 1; j < 3; j++, number++) {
+            	document.write(number + " ");
+            }
+        document.write(number + "<br>");
+      }
+    }
+    
+    // forFunc()
+
+    // print this
+    // 1, 2, 3, 4
+    // 5, 6, 7, 8
+    // 9, 10, 11, 12
+
+    const forInfor = function() {
+      let num = 1;
+      for(i=1; i<=3; i++, num++){
+        for(j=1; j<=3; j++, num++){
+          document.write(num + " ");
+        }
+        document.write(num + "<br>");
+      }
+    }
+
+    forInfor();
+
+  </script>
+</body>
+</html>

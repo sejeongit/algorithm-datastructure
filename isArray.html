@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+	// IT IS RETURN TYPE 
+ 
+	// first one array ==> [] but, why ? it is array, but return type is 			object array, because array can have object inside, check ->		ret2()
+	function ret() {
+    return toString.call([1, 2, 4, 0]);
+  }
+    
+  // this one is array that has object inside 
+  function ret2() {
+    return toString.call([{"name": "test", "other": "test2"}]);
+  }
+  
+  // second one object ==> { }
+  function ret3() {
+  
+    return toString.call({"name": "test", "other": "test2"});
+  }
+  
+  // but this is also another possible case 
+  // object can have array inside
+  function ret4() {
+    return toString.call({"test": [1, 2, 3, 4, 5]});
+  }
+  
+  
+  document.getElementById('demo').innerHTML = ret();
+  
+  document.getElementById('demo2').innerHTML = ret2();
+  
+  document.getElementById('demo3').innerHTML = ret3();
+  
+  document.getElementById('demo4').innerHTML = ret4();
+  
+  // how to access these ?
+	var one = {"test": [1,2,3,4,5]}; // print -> 3
+  var two = [{"test": "one"}, {"test2": "two"}];// print -> two  
+
+  console.log(one.test[2]);
+  console.log(two[1]["test2"]);
+
+  var obj = {"outerkey": {"anykey1": "anyvalue1", "anykey2": "anykey2", "innerkey1": {"one": "two"}}} // print two
+  console.log(obj.outerkey["innerkey1"].one);
+  console.log(obj.outerkey.innerkey1.one);
+  console.log(obj.outerkey["innerkey1"]["one"]);
+  console.log(obj.outerkey.innerkey1["one"]);
+  console.log(obj["outerkey"]["innerkey1"]["one"]);
+  console.log(obj["outerkey"].innerkey1["one"]);
+
+
+</script>
+
+</body>
+</html>
