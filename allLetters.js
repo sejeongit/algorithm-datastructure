@@ -3,12 +3,11 @@
 
 // let str = "hello";
 // let arr = ['h', 'e', 'l', 'l', 'o'] // same as str
-// const allLetters = function(){
-//   for(let i=0; i < str.length; i++){
+// console.log(str.length);
+// console.log(str[0]);
 
-//   }
-// }
 
+// map comes always with key-value pair
 let str = "helloworldhello"
   var map = new Map()
   
@@ -20,10 +19,30 @@ let str = "helloworldhello"
   
     for(let i = 0; i < str.length; i++) {
       if (map[str[i]] != 0) {
-        document.write(str[i] + ": " + map[str[i]] + " ")
+        console.log(str[i] + ": " + map[str[i]] + " ")
         map[str[i]] = 0;
       }
     }
       for (const [key, value] of map) {
-  		document.write(key + ' = ' + value)
+  		console.log(key + ' = ' + value)
 	}
+
+
+  let str2 = "Suggesting";
+  let count = new Array(26);
+  str2 = str2.toLowerCase();
+  for(let j = 0; j<str2.length; j++){
+
+  }
+
+  // var arr = new Array(10);
+  // arr[1] = 100;
+  // console.log(arr[1]); // 100
+  // arr['my_name'] = 100;
+  // console.log(arr['my_name']); // 100
+
+  // var map = new Map();
+  // map[1] = 100;
+  // console.log(map[1]); // 100
+  // map['my_name'] = 100;
+  // console.log(map['my_name']); // 100
